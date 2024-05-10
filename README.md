@@ -29,6 +29,12 @@ A cli tool enhancing your terminal usage by allowing you to save your most used 
 ```console
 brew tap devs-on-remote/shortcut
 
+brew install shortcut
+```
+
+To troubleshoot install issues:
+
+```console
 brew install --build-from-source --verbose --debug shortcut
 ```
 

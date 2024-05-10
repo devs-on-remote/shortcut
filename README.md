@@ -58,6 +58,8 @@ brew upgrade shortcut
 
 `sc --version` - displays the current version
 
+## Available commands (from project dir):
+
 Use `bin/shortcut` instead of `shortcut` or `sc`
 
 ## Contribution

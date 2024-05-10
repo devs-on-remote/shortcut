@@ -47,12 +47,16 @@ RSpec.describe Shortcut::Commands::Edit do
     context 'when the script exists' do
       before do
         allow(Dir).to receive(:exist?).with(scripts_dir).and_return(true)
+        # Expect file existence check for both the old and the new script path if they differ
         allow(File).to receive(:exist?).with(script_path).and_return(true)
+        allow(File).to receive(:exist?).with(new_script_path).and_return(false)
+
         allow(FileUtils).to receive(:mv).with(script_path, new_script_path)
+        # Mock file reading and writing
         allow(File).to receive(:open).with(
           new_script_path,
           'r'
-        ).and_yield(StringIO.new("#!/bin/bash\n## dest: #{scripts_dir} description: #{new_description}\n"))
+        ).and_yield(StringIO.new("#!/bin/bash\n## dest: /Users/ description: Old description\n"))
         allow(File).to receive(:open).with(new_script_path, 'w')
       end
 

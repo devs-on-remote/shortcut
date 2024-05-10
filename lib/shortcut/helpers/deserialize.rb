@@ -17,7 +17,7 @@ module Shortcut
 
         File.open(script_path, 'r') do |file|
           file.each_line do |line|
-            dest = line.gsub('## dest: ', '').strip if line.match?(/## dest: /)
+            dest = line.gsub('## dest: ', '').strip if line.match?(/## dest:/)
 
             description = line.gsub('## description: ', '').strip if line.match?(/## description:/)
           end

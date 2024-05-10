@@ -27,12 +27,15 @@ module Shortcut
 
           new_script_path = File.join(Config.scripts_dir, "#{new_script_name}.sh")
 
-          FileUtils.mv(script_path, new_script_path)
+          FileUtils.mv(script_path, new_script_path) if new_script_path != script_path
+
+          script_info = Helpers::Deserialize.call(new_script_name)
+          destination = script_info[:dest]
 
           File.open(new_script_path, 'r') do |file|
             lines = file.readlines
             lines[0] = "#!/bin/bash\n"
-            lines[1] = "## dest: #{Config.scripts_dir}\n"
+            lines[1] = "## dest: #{destination}\n"
             lines[2] = "## description: #{new_description}\n"
             File.open(new_script_path, 'w') do |file|
               file.puts(lines)

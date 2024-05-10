@@ -1,0 +1,75 @@
+AllCops:
+  TargetRubyVersion: 3.1
+  EnabledByDefault: true
+
+# Commonly used screens these days easily fit more than 80 characters.
+Layout/LineLength:
+  Max: 120
+
+Layout/SingleLineBlockChain:
+  Exclude:
+    - "spec/**/*.rb"
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Style/StaticClass:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Exclude:
+    - "spec/**/*.rb"
+
+Style/StringHashKeys:
+  Enabled: false
+
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
+
+Layout/MultilineAssignmentLayout:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/StringConcatenation:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+convention:Style/GlobalStdStream:
+  Enabled: false
+
+Style/FetchEnvVar:
+    Enabled: false

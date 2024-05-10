@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Running RSpec tests..."
+bundle exec rspec spec --pattern "**/*_spec.rb"
+
+# Check if RSpec exited with an error
+if [ $? -eq 0 ]; then
+  echo "Tests completed successfully."
+else
+  echo "Tests failed."
+  exit 1
+fi

@@ -32,6 +32,14 @@ brew tap devs-on-remote/shortcut
 brew install --build-from-source --verbose --debug shortcut
 ```
 
+## Update
+
+```console
+brew update
+
+brew upgrade shortcut
+```
+
 ## Available commands (via homebrew):
 
 `sc <script_name>` - executes the saved script

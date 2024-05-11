@@ -7,7 +7,7 @@ TLTR: Shortcut - record, save & execute your most used scripts in the terminal.
 Example:
 
 ```ruby
-sc fe be    # Boots your fe and be project in two separate terminals
+sc fe be    # Boots your fe and be project in two separate terminal tabs
 
 sc my_dir   # Instead of typing N cd, move stright to the directory
 ```
@@ -22,7 +22,7 @@ A cli tool enhancing your terminal usage by allowing you to save your most used 
 
 1. You record your script or copy an existing one to the directory.
 
-2. Execute saved script - it will open in a separate tabs.
+2. Execute saved script - it will open in a separate tab/s.
 
 ## Install with homebrew:
 
@@ -70,4 +70,4 @@ Use `bin/shortcut` instead of `shortcut` or `sc`
 
 ## Contribution
 
-When contributing remember to update the CHANGELOG and the VERSION
+When contributing remember to update the CHANGELOG and update version.rb

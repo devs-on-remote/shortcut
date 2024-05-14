@@ -6,12 +6,11 @@ Gem::Specification.new do |spec|
   spec.name = 'shortcut'
   spec.version = Shortcut::VERSION
   spec.authors = ['Jan Piotrzkowski']
-  spec.email = ['piotrzkowski.jan@gmail.com']
 
-  spec.summary = 'Write a short summary, because RubyGems requires one.'
-  spec.description = 'Write a longer description or delete this line.'
+  spec.summary = 'Record, save & execute your most used scripts in the terminal'
+  spec.description = 'A cli tool enhancing your terminal usage by allowing you to save your most used commands/scripts and then executing them in no time.'
   spec.homepage = 'https://github.com/devs-on-remote/shortcut'
-  spec.license = 'MIT'
+  spec.license = 'BSD 2-Clause License'
   spec.required_ruby_version = '>= 2.6.0'
 
   spec.metadata['homepage_uri'] = spec.homepage

@@ -76,6 +76,7 @@ module Shortcut
         puts(Rainbow('`sc --edit` to edit saved script').indianred)
         puts(Rainbow('`sc --version` to see the current version').indianred)
         puts(Rainbow('`sc --license` to see the license').indianred)
+        puts(Rainbow('`sc --export` to export all scripts').indianred)
       end
 
       # ------------------------------------------------------------------------

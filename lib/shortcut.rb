@@ -11,6 +11,7 @@ require_relative 'shortcut/commands/list'
 require_relative 'shortcut/commands/exec'
 require_relative 'shortcut/commands/delete'
 require_relative 'shortcut/commands/edit'
+require_relative 'shortcut/commands/export'
 
 require_relative 'shortcut/config'
 require_relative 'shortcut/helpers/messages'
@@ -31,6 +32,7 @@ class CLI < Thor
   method_option :edit, type: :boolean, default: false, desc: 'Edit a script'
   method_option :version, type: :boolean, default: false, desc: 'Current version of the Shortcut'
   method_option :license, type: :boolean, default: false, desc: 'Show license'
+  method_option :export, type: :boolean, default: false, desc: 'Export all scripts'
   def exec(*script_names)
     Signal.trap('INT') do
       puts "\nOperation cancelled by user."
@@ -52,6 +54,8 @@ class CLI < Thor
       Shortcut::Helpers::Messages.version
     elsif options[:license]
       Shortcut::Helpers::Messages.license
+    elsif options[:export]
+      Shortcut::Commands::Export.call
     elsif script_names.empty?
       Shortcut::Helpers::Messages.name_can_not_be_empty
       Shortcut::Helpers::Messages.all_commands
